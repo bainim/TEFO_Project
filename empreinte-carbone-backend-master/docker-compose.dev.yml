@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+  db:
+    container_name: postgres_tefo
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - "dbdata:/var/lib/postgresql/data"
+
+  mail:
+    container_name: mail_tefo
+    image: mailhog/mailhog:latest
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+#  keycloak:
+#    container_name: keycloak_tefo
+#    image: jboss/keycloak:latest
+#    ports:
+#      - "8080:8080"
+#    environment:
+#      - KEYCLOAK_USER=admin
+#      - KEYCLOAK_PASSWORD=admin
+#      - DB_VENDOR=POSTGRES
+#      - DB_ADDR=db
+#      - DB_DATABASE=keycloak
+#      - DB_USER=postgres
+#      - DB_PASSWORD=postgres
+#      - PROXY_ADDRESS_FORWARDING=true
+#      #- KEYCLOAK_FRONTEND_URL=http://10.0.2.2:8080/auth
+#    links:
+#      - db
+
+volumes:
+  dbdata:

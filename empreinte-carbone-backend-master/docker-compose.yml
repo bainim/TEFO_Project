@@ -1,0 +1,22 @@
+version: '2.4'
+services:
+  backend_empreinte_carbone_container:
+    build:
+      context: ./
+      dockerfile: Dockerfile.springboot
+    mem_limit: 1024MB
+    networks:
+    - app
+    ports:
+    - 9090:9090
+    environment:
+    - SPRING_PROFILES_ACTIVE=local
+  mail:
+    image: schickling/mailcatcher
+    ports:
+    - 1080:1080
+    networks:
+    - app
+networks:
+  app:
+    driver: bridge

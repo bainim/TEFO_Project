@@ -1,0 +1,33 @@
+{
+  "properties": [
+    {
+      "name": "site.lien",
+      "type": "java.lang.String",
+      "description": "Description for site.lien."
+    },
+    {
+      "name": "pageable.element.per-page",
+      "type": "java.lang.String",
+      "description": "Description for pageable.element.per-page."
+    },
+    {
+      "name": "keycloak-admin.url",
+      "type": "java.lang.String",
+      "description": "Description for keycloak-admin.url."
+    },
+    {
+      "name": "keycloak-admin.realm",
+      "type": "java.lang.String",
+      "description": "Description for keycloak-admin.realm."
+    },
+    {
+      "name": "keycloak-admin.client-id",
+      "type": "java.lang.String",
+      "description": "Description for keycloak-admin.client-id."
+    },
+    {
+      "name": "keycloak-admin.client-secret",
+      "type": "java.lang.String",
+      "description": "Description for keycloak-admin.client-secret."
+    }
+  ] }
